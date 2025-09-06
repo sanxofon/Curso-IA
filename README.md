@@ -100,4 +100,4 @@ Unirse a la sesión, levantar la mano, usar el Chat.
 
 - Las sesiones son vía Meet (Google). Se recomienda a cada usuario tener una cuenta google (GMail) activa en su navegador durante el curso.
 - Esta Guía del curso que seguiremos en línea cada uno desde su Computadora (PC, Mac, Linux)
-- Mira la lista de herramientas en línea abiertas y/o gratuitas de diversos países con descripciones.
+- Mira la [lista de herramientas](lista.html) en línea abiertas y/o gratuitas de diversos países con descripciones.
