@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas IA de uso gratuito en línea</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        .tags-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 24px 0 12px 0;
+            justify-content: center;
+        }
+        .tags-filter .tag {
+            cursor: pointer;
+            border: 1px solid #45a049;
+            background: #fff;
+            color: #45a049;
+            padding: 5px 14px;
+            border-radius: 16px;
+            font-size: 1em;
+            transition: background 0.2s, color 0.2s;
+            user-select: none;
+        }
+        .tags-filter .tag.selected {
+            background: #45a049;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Herramientas de IA Gratuitas en línea</h1>
+        <h3>Versión 2025-09</h3>
+        <p>Explora una variedad de herramientas de inteligencia artificial disponibles de forma gratuita.</p>
+        <p>¿Conoces alguna herramienta que debería estar aquí? Puedes contribuir, sugerir nuevas herramientas o mejorar la información directamente en nuestro repositorio público en <a href="https://github.com/sanxofon/lista-herramientas-ia-uso-gratuito-en-linea" target="_blank">GitHub</a>.</p>
+    </header>
+    <div class="container">
+        <!-- Lista de etiquetas para filtrar -->
+        <div class="tags-filter" id="tags-filter">
+            <span class="tag" data-tag="api" title="Ofrece punto de acceso programático (gratuito o freemium)">api</span><span class="tag" data-tag="audio" title="Síntesis o reconocimiento de voz">audio</span><span class="tag" data-tag="automation" title="Permite crear flujos o agentes automatizados sin código">automation</span><span class="tag" data-tag="chat" title="Modelo de conversación general (texto ↔ texto)">chat</span><span class="tag" data-tag="code" title="Optimizado para generar o explicar código">code</span><span class="tag" data-tag="design" title="Herramienta orientada a diseño gráfico o prototipos">design</span><span class="tag" data-tag="freemium" title="Gratuito con límites; plan de pago opcional">freemium</span><span class="tag" data-tag="image" title="Generación o edición de imágenes">image</span><span class="tag" data-tag="mobile" title="Disponible como app para iOS/Android">mobile</span><span class="tag" data-tag="multimodal" title="Acepta y genera más de un tipo de dato (texto, imagen, audio…)">multimodal</span><span class="tag" data-tag="open-weight" title="Pesos del modelo públicos (descargables)">open-weight</span><span class="tag" data-tag="privacy" title="Promete mayor privacidad (sin registro o sin retención de datos)">privacy</span><span class="tag" data-tag="reasoning" title="Enfoque en razonamiento lógico o matemático">reasoning</span><span class="tag" data-tag="search" title="Capacidad de búsqueda en internet o bases de datos">search</span><span class="tag" data-tag="video" title="Generación o edición de video">video</span>        </div>
+        <main>
+            <section id="tools-list">
+                <!-- El listado se renderiza por JS -->
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>Creative Commons 3.0 International - ByNcSa | 2025 Participa en esta recopilación desde <a href="https://github.com/sanxofon/lista-herramientas-ia-uso-gratuito-en-linea" target="_blank">github</a>.</p>
+    </footer>
+    <script>
+        // Datos PHP -> JS
+        const toolsData = [{"name":"Google AI Studio (Gemini)","url":"https:\/\/aistudio.google.com","origin":"USA","description":"Chat multimodal con código, imágenes y API gratuita.","tags":["chat","multimodal","code","api","freemium"]},{"name":"ChatGPT (GPT-4o mini)","url":"https:\/\/chatgpt.com","origin":"USA","description":"Chat gratuito con búsqueda web y análisis de imágenes.","tags":["chat","multimodal","code","search","freemium"]},{"name":"Meta AI (Llama 3)","url":"https:\/\/www.meta.ai","origin":"USA","description":"Asistente basado en Llama 3 de código abierto.","tags":["chat","open-weight","image","privacy"]},{"name":"Grok-1 (x.ai)","url":"https:\/\/grok.com","origin":"USA","description":"Chat con acceso real-time a X (Twitter) y razonamiento.","tags":["chat","search","reasoning","freemium"]},{"name":"Claude 3 Haiku","url":"https:\/\/claude.ai","origin":"USA","description":"Chat rápido de Anthropic para código y razonamiento.","tags":["chat","code","reasoning","freemium"]},{"name":"Mistral Le Chat","url":"https:\/\/chat.mistral.ai","origin":"Francia","description":"Chat abierto francés con API y buen rendimiento en código.","tags":["chat","code","open-weight","api","freemium"]},{"name":"Qwen Turbo (Alibaba)","url":"https:\/\/chat.qwen.ai","origin":"China","description":"Chat multimodal chino con API gratuita.","tags":["chat","multimodal","code","api","freemium"]},{"name":"DeepSeek Chat","url":"https:\/\/chat.deepseek.com","origin":"China","description":"Chat código-abierto con fuerte capacidad de razonamiento.","tags":["chat","code","reasoning","open-weight","freemium"]},{"name":"HuggingChat","url":"https:\/\/huggingface.co\/chat","origin":"USA","description":"Chat 100 % open-source sin guardar datos personales.","tags":["chat","open-weight","privacy","api"]},{"name":"DuckDuckGo AI Chat","url":"https:\/\/duckduckgo.com\/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1","origin":"USA","description":"Chat privado que no retiene historial ni cookies.","tags":["chat","privacy","open-weight"]},{"name":"Perplexity AI","url":"https:\/\/www.perplexity.ai","origin":"USA","description":"Buscador conversacional con respuestas citadas.","tags":["search","chat","multimodal","freemium"]},{"name":"You.com (YouChat)","url":"https:\/\/you.com","origin":"USA","description":"Buscador + chat multimodal con API gratuita.","tags":["search","chat","multimodal","api","freemium"]},{"name":"Poe (Quora)","url":"https:\/\/poe.com","origin":"USA","description":"Agregador de bots con apps móviles y uso gratuito.","tags":["chat","multimodal","mobile","freemium"]},{"name":"Pi (Inflection)","url":"https:\/\/pi.ai","origin":"USA","description":"Chat móvil amigable y centrado en privacidad.","tags":["chat","mobile","privacy","freemium"]},{"name":"LMSYS Chatbot Arena","url":"https:\/\/chat.lmsys.org","origin":"Internacional","description":"Comparador público de modelos open-weight.","tags":["chat","open-weight","reasoning"]},{"name":"Codeium","url":"https:\/\/codeium.com","origin":"USA","description":"Asistente de código con API y privacidad local.","tags":["code","api","privacy","freemium"]},{"name":"Tabnine (free tier)","url":"https:\/\/tabnine.com","origin":"Israel","description":"Autocompletado de código con modelo local o cloud.","tags":["code","api","freemium"]},{"name":"Fireworks AI","url":"https:\/\/fireworks.ai","origin":"USA","description":"API rápida de modelos abiertos (Mixtral, etc.).","tags":["api","open-weight","chat","freemium"]},{"name":"Replicate demos","url":"https:\/\/replicate.com","origin":"USA","description":"Marketplace de modelos open con demos gratuitas.","tags":["api","open-weight","image","audio","freemium"]},{"name":"Kimi Chat (Moonshot)","url":"https:\/\/kimi.moonshot.cn","origin":"China","description":"Chat chino con gran ventana de contexto y razonamiento.","tags":["chat","multimodal","reasoning","freemium"]},{"name":"Zephyr 7β – HF Space","url":"https:\/\/huggingface.co\/spaces\/HuggingFaceH4\/zephyr-chat","origin":"Internacional","description":"Demo pública del modelo abierto Zephyr.","tags":["chat","open-weight","privacy"]},{"name":"Google NotebookLM","url":"https:\/\/notebooklm.google.com","origin":"USA","description":"Chat privado sobre tus propios documentos.","tags":["chat","multimodal","privacy","freemium"]},{"name":"Canva Magic Write","url":"https:\/\/canva.com","origin":"Australia","description":"Generador de texto e imágenes dentro de Canva.","tags":["chat","image","freemium"]},{"name":"Cohere Playground","url":"https:\/\/dashboard.cohere.ai\/playground","origin":"Canadá","description":"Sandbox para probar modelos de lenguaje y código.","tags":["chat","api","code","freemium"]},{"name":"通义万相 (Tongyi Wanxiang)","url":"https:\/\/tongyi.aliyun.com\/wanxiang","origin":"China","description":"Generador de imágenes y arte de Alibaba.","tags":["image","multimodal","freemium"]},{"name":"文心一格 (ERNIE-VilG)","url":"https:\/\/yige.baidu.com","origin":"China","description":"Creador de imágenes estilo DALL-E de Baidu.","tags":["image","multimodal","freemium"]},{"name":"剪映 Dreamina","url":"https:\/\/dreamina.capcut.com","origin":"China","description":"Crea imágenes y clips para TikTok desde texto.","tags":["image","video","mobile","freemium"]},{"name":"腾讯智影 (Zhiying)","url":"https:\/\/zenvideo.qq.com","origin":"China","description":"Suite china de edición de video con IA y voz.","tags":["video","audio","multimodal","freemium"]},{"name":"讯飞星火 SparkDesk","url":"https:\/\/xinghuo.xfyun.cn","origin":"China","description":"Asistente conversacional y síntesis de voz de iFLYTEK.","tags":["chat","audio","api","freemium"]},{"name":"360智脑","url":"https:\/\/ai.360.com","origin":"China","description":"Chat con búsqueda integrada de 360.","tags":["chat","search","freemium"]},{"name":"商汤秒画 SenseMirage","url":"https:\/\/miaohua.sensetime.com","origin":"China","description":"Generador de imágenes del gigante SenseTime.","tags":["image","multimodal","freemium"]},{"name":"抖音即创 (Jichuang)","url":"https:\/\/www.jichuang.com","origin":"China","description":"Crea videos e imágenes para Douyin\/TikTok con IA.","tags":["video","image","freemium"]},{"name":"稿定AI","url":"https:\/\/www.gaoding.com\/ai","origin":"China","description":"Diseño gráfico e imágenes con plantillas inteligentes.","tags":["image","design","freemium"]},{"name":"墨刀 AI","url":"https:\/\/modao.cc\/ai","origin":"China","description":"Prototipado y diseño UI asistido por IA.","tags":["image","design","freemium"]},{"name":"Leonardo.Ai","url":"https:\/\/leonardo.ai","origin":"Australia","description":"Generador de imágenes y texturas para videojuegos.","tags":["image","multimodal","freemium"]},{"name":"Playground AI","url":"https:\/\/playgroundai.com","origin":"UK","description":"Crea y edita imágenes con modelos abiertos.","tags":["image","mobile","freemium"]},{"name":"Pika Labs","url":"https:\/\/pika.art","origin":"UK","description":"Generador de clips de video desde texto.","tags":["video","multimodal","freemium"]},{"name":"Runway ML (trial)","url":"https:\/\/runwayml.com","origin":"UK","description":"Suite profesional de video e imagen con IA.","tags":["video","image","audio","freemium"]},{"name":"Stability AI – Clipdrop","url":"https:\/\/clipdrop.co","origin":"UK","description":"Edita, elimina fondos y genera imágenes con Stable Diffusion.","tags":["image","multimodal","api","freemium"]},{"name":"Synthesia (demo)","url":"https:\/\/www.synthesia.io","origin":"UK","description":"Crea avatares que hablan en video desde texto.","tags":["video","audio","freemium"]},{"name":"ElevenLabs (free tier)","url":"https:\/\/elevenlabs.io","origin":"Poland","description":"Síntesis de voz ultra-realista con plan gratuito.","tags":["audio","api","freemium"]},{"name":"MyEdit (CyberLink)","url":"https:\/\/myedit.online","origin":"Taiwan","description":"Editor online de audio e imagen impulsado por IA.","tags":["audio","image","freemium"]},{"name":"PhotoRoom","url":"https:\/\/www.photoroom.com","origin":"France","description":"Elimina fondos y crea product shots desde el móvil.","tags":["image","mobile","freemium"]},{"name":"Lightricks LTX Studio","url":"https:\/\/ltx.studio","origin":"Israel","description":"Generación y edición de video con IA generativa.","tags":["video","image","freemium"]},{"name":"Google Cloud Vision","url":"https:\/\/cloud.google.com\/vision","origin":"USA","description":"API de análisis y etiquetado de imágenes.","tags":["image","api","freemium"]},{"name":"Google Speech-to-Text","url":"https:\/\/cloud.google.com\/speech-to-text","origin":"USA","description":"API de reconocimiento de voz en múltiples idiomas.","tags":["audio","api","freemium"]},{"name":"Google Text-to-Speech","url":"https:\/\/cloud.google.com\/text-to-speech","origin":"USA","description":"API de síntesis de voz natural.","tags":["audio","api","freemium"]},{"name":"Google Video Intelligence","url":"https:\/\/cloud.google.com\/video-intelligence","origin":"USA","description":"API de análisis y segmentación de video.","tags":["video","api","freemium"]},{"name":"Otter.ai","url":"https:\/\/otter.ai","origin":"USA","description":"Transcripción y resúmenes de reuniones en tiempo real.","tags":["audio","chat","freemium"]},{"name":"Fireflies.ai","url":"https:\/\/fireflies.ai","origin":"USA","description":"Graba, transcribe y busca en tus videollamadas.","tags":["audio","chat","api","freemium"]},{"name":"Fathom.video","url":"https:\/\/fathom.video","origin":"USA","description":"Resume y destaca llamadas de Zoom\/Teams automáticamente.","tags":["audio","chat","freemium"]},{"name":"Grammarly","url":"https:\/\/grammarly.com","origin":"USA","description":"Corrector de estilo y generador de textos con IA.","tags":["chat","multimodal","freemium"]},{"name":"Zapier Agents","url":"https:\/\/zapier.com\/agents","origin":"USA","description":"Crea agentes automatizados conectados a 6000+ apps.","tags":["chat","api","automation","freemium"]},{"name":"Vidnoz AI","description":"Una plataforma líder y gratuita de generación de videos con IA que ofrece más de 1500 avatares de IA, 1830 voces realistas generadas por IA y 2800 plantillas. Permite crear videos con avatares y voces de IA.","url":"https:\/\/www.vidnoz.com\/","tags":["video","freemium"],"origin":"India"},{"name":"GenApe AI Video Generator","description":"Esta herramienta convierte texto o imágenes en videos dinámicos de 3 a 5 segundos utilizando algoritmos avanzados de aprendizaje profundo de IA. Ofrece un plan gratuito con 10.000 tokens para nuevos usuarios.","url":"https:\/\/app.genape.ai\/","tags":["video","freemium"],"origin":"USA"},{"name":"HeyGen","description":"Un generador de videos con IA que permite a los usuarios crear videos de alta calidad con avatares realistas y clonación de voz multilingüe. Ofrece un plan gratuito con herramientas básicas para convertir texto en video y crear avatares de IA.","url":"https:\/\/www.heygen.com\/","tags":["video","freemium"],"origin":"China"},{"name":"VideoGPT","description":"Un generador de videos con IA que utiliza inteligencia artificial para crear o mejorar contenido audiovisual a partir de descripciones de texto. Cuenta con un generador de videos de anime con IA y voces realistas, y los usuarios conservan la propiedad de los videos generados.","url":"https:\/\/videogpt.app\/","tags":["video","freemium"],"origin":"USA"},{"name":"Animaker","description":"Una plataforma en línea para crear videos animados y de acción real. Ofrece un plan gratuito para siempre, con la opción de actualizar a funciones premium.","url":"https:\/\/www.animaker.com\/","tags":["video","freemium"],"origin":"India"},{"name":"Synthesia","description":"Una plataforma líder de videos con IA para empresas, que ofrece una prueba gratuita de creación de videos. Los usuarios pueden crear videos con más de 230 avatares en más de 140 idiomas simplemente escribiendo texto.","url":"https:\/\/www.synthesia.io\/","tags":["video","freemium"],"origin":"UK"},{"name":"Pictory","description":"Un generador de videos con IA que transforma guiones, artículos o publicaciones de blog en videos atractivos. Ofrece una prueba gratuita para crear videos a partir de texto.","url":"https:\/\/pictory.ai\/","tags":["video","freemium"],"origin":"India"},{"name":"InVideo","description":"Una herramienta de creación de videos con IA que permite a los usuarios generar videos a partir de texto, guiones o publicaciones de blog. Proporciona un plan gratuito con acceso a una biblioteca de plantillas y material de archivo.","url":"https:\/\/invideo.io\/","tags":["video","freemium"],"origin":"India"},{"name":"Lumen5","description":"Un creador de videos con IA que convierte publicaciones de blog, artículos o guiones en videos para redes sociales. Ofrece un plan gratuito con funciones básicas y una biblioteca de plantillas.","url":"https:\/\/lumen5.com\/","tags":["video","freemium"],"origin":"Canada"},{"name":"Runway ML","description":"Una plataforma creativa de IA que incluye un generador de videos con IA. Permite a los usuarios crear videos a partir de indicaciones de texto y ofrece un nivel gratuito para tareas básicas de creación de videos.","url":"https:\/\/runwayml.com\/","tags":["video","freemium"],"origin":"USA"},{"name":"wan.video","description":"Wan 2.2 es un modelo líder de generación de videos con IA desarrollado en China, reconocido como una de las mejores herramientas de video con IA, con capacidades avanzadas para generar videos realistas y de alta calidad a partir de indicaciones de texto. Admite el uso en inglés y está ganando atención global por su velocidad y fidelidad.","url":"https:\/\/wan.video\/","tags":["video","freemium"],"origin":"China"}];
+        const tagsData = {"api":"Ofrece punto de acceso programático (gratuito o freemium)","audio":"Síntesis o reconocimiento de voz","automation":"Permite crear flujos o agentes automatizados sin código","chat":"Modelo de conversación general (texto ↔ texto)","code":"Optimizado para generar o explicar código","design":"Herramienta orientada a diseño gráfico o prototipos","freemium":"Gratuito con límites; plan de pago opcional","image":"Generación o edición de imágenes","mobile":"Disponible como app para iOS\/Android","multimodal":"Acepta y genera más de un tipo de dato (texto, imagen, audio…)","open-weight":"Pesos del modelo públicos (descargables)","privacy":"Promete mayor privacidad (sin registro o sin retención de datos)","reasoning":"Enfoque en razonamiento lógico o matemático","search":"Capacidad de búsqueda en internet o bases de datos","video":"Generación o edición de video"};
+
+        // Renderiza la lista de herramientas filtradas
+        function renderTools(selectedTags = []) {
+            const container = document.getElementById('tools-list');
+            container.innerHTML = '';
+            let filtered = toolsData;
+            if (selectedTags.length > 0) {
+                filtered = toolsData.filter(tool =>
+                    selectedTags.every(tag => tool.tags.includes(tag))
+                );
+            }
+            if (filtered.length === 0) {
+                container.innerHTML = '<p style="text-align:center;">No hay herramientas con esas etiquetas.</p>';
+                return;
+            }
+            filtered.forEach(tool => {
+                const article = document.createElement('article');
+                article.className = 'tool';
+                article.innerHTML = `
+                    <h2>${escapeHtml(tool.name)}</h2>
+                    <p><strong>URL:</strong> <a href="${escapeHtml(tool.url)}" target="_blank">${escapeHtml(tool.url)}</a></p>
+                    <p><strong>Origen:</strong> ${escapeHtml(tool.origin)}</p>
+                    <p>${escapeHtml(tool.description)}</p>
+                    <p><strong>Etiquetas:</strong> ${tool.tags.map(tag =>
+                        `<span class="tag" title="${escapeHtml(tagsData[tag] ?? tag)}">${escapeHtml(tag)}</span>`
+                    ).join(' ')}</p>
+                `;
+                container.appendChild(article);
+            });
+        }
+
+        // Escapa HTML para evitar XSS
+        function escapeHtml(text) {
+            return String(text)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // Maneja selección de etiquetas
+        document.addEventListener('DOMContentLoaded', () => {
+            const tagElems = document.querySelectorAll('#tags-filter .tag');
+            let selectedTags = [];
+
+            tagElems.forEach(elem => {
+                elem.addEventListener('click', () => {
+                    const tag = elem.getAttribute('data-tag');
+                    if (selectedTags.includes(tag)) {
+                        selectedTags = selectedTags.filter(t => t !== tag);
+                        elem.classList.remove('selected');
+                    } else {
+                        selectedTags.push(tag);
+                        elem.classList.add('selected');
+                    }
+                    renderTools(selectedTags);
+                });
+            });
+
+            // Render inicial (sin filtro)
+            renderTools();
+        });
+    </script>
+</body>
+</html>
