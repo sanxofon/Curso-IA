@@ -6,15 +6,15 @@ Curso Introductorio a la Inteligencia Artificial
 
 Vamos a usar nuestra cuenta Google para registrarnos en distintos servicios gratuitos. Para esto es importante saber administrar los accesos a sitios de terceros con mi cuenta de google. Esto permite, entre otras cosas eliminar los accesos que no nos interese mantener activos:
 
-- [https://myaccount.google.com/connections?hl=es]()
+- [https://myaccount.google.com/connections?hl=es](https://myaccount.google.com/connections?hl=es)
 
 Otro elemento importante a tener en cuenta para nuestra actividad digital en general en Google es exportar "mis datos" recopilados por Google. Es mucha la información que puede tener Google o Mac sobre nosotros y es importante poder tenerla nosotros también, además podemos usarlas como data de entrenamiento de "nuestras" IA's provadas:
 
-- [https://takeout.google.com/?hl=es]()
+- [https://takeout.google.com/?hl=es](https://takeout.google.com/?hl=es)
 
 El historial de actividad de Google es otra información importante sobre nosotros mismos que incluye nuestro uso de Youtube.
 
-- [https://myactivity.google.com/myactivity?hl=es]()
+- [https://myactivity.google.com/myactivity?hl=es](https://myactivity.google.com/myactivity?hl=es)
 
 ## Curso de Introducción a la Inteligencia Artificial para Profesionales
 
@@ -100,28 +100,28 @@ Unirse a la sesión, levantar la mano, usar el Chat.
 
 EEUU:
 
-- [https://aistudio.google.com]()
-- [https://chatgpt.com/]()
-- [https://www.meta.ai/]()
-- [https://grok.com/]()
-- [https://claude.ai/]()
+- [https://aistudio.google.com](https://aistudio.google.com)
+- [https://chatgpt.com/](https://chatgpt.com/)
+- [https://www.meta.ai/](https://www.meta.ai/)
+- [https://grok.com/](https://grok.com/)
+- [https://claude.ai/](https://claude.ai/)
 
 FRANCIA:
 
-- [https://chat.mistral.ai]()
+- [https://chat.mistral.ai](https://chat.mistral.ai)
 
 CHINA:
 
-- [https://chat.qwen.ai]()
-- [https://chat.deepseek.com/]()
+- [https://chat.qwen.ai](https://chat.qwen.ai)
+- [https://chat.deepseek.com/](https://chat.deepseek.com/)
 
 Internacionales (Cede en UK)
 
-- [https://huggingface.co/chat/]()
+- [https://huggingface.co/chat/](https://huggingface.co/chat/)
 
 PRIVADO. Modelos pequeños.
 
-- [https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1]()
+- [https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1](https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1)
 
 ### Recomendaciones y Materiales incluidos
 
