@@ -16,14 +16,16 @@ El historial de actividad de Google es otra información importante sobre nosotr
 
 - [https://myactivity.google.com/myactivity?hl=es](https://myactivity.google.com/myactivity?hl=es)
 
-## Curso de Introducción a la Inteligencia Artificial para Profesionales
+# Curso de Introducción a la Inteligencia Artificial para Profesionales
 
 **Dictado en Paraná, Entre Ríos**  
 **Profesor: Santiago Chávez Novaro** (Museo Virtual de Matemáticas, SMM, México)
 
-### Objetivo del programa
+## Objetivo del programa
 
 Proporcionar a profesionales de cualquier disciplina una comprensión sólida, accesible y crítica de los fundamentos matemáticos, técnicos y geopolíticos que sustentan los sistemas de IA actualmente en uso, con especial énfasis en modelos de lenguaje. Al finalizar, los participantes podrán interactuar con estos sistemas de manera segura, eficiente y contextualizada, identificando sus límites y potencialidades.
+
+## PRIMERA SESIÓN
 
 ### 0. Breve introducción a la interfaz de Meet que usaremos para las sesiones
 
@@ -32,21 +34,25 @@ Unirse a la sesión, levantar la mano, usar el Chat.
 ### 1. Construcción de intuiciones matemáticas
 
 **Título:** *Pensar la IA sin fórmulas*  
+**Herramienta:** [https://sanxofon.github.io/fondo-del-mar](https://sanxofon.github.io/fondo-del-mar)
 **Descripción:** Desarrollaremos una visión intuitiva de los procesos algebraicos y estadísticos que permiten a un modelo generar texto útil, sin recurrir a notación avanzada. El objetivo es que cada participante “sienta” por qué los números se transforman en palabras coherentes.
 
 ### 2. Tokenización: el primer corte del lenguaje
 
 **Título:** *De las letras a los fragmentos significativos*  
+**Herramienta:** Pizrra blanca (Inkodo)
 **Descripción:** Explicaremos por qué los modelos no leen palabras completas sino “tokens”, cómo se construye ese vocabulario fragmentado y por qué la elección de token afecta la calidad y el costo de la respuesta.
 
 ### 3. Embeddings: coordenadas del significado
 
 **Título:** *Ubicar ideas en un mapa de vectores*  
+**Herramienta:** [https://phet.colorado.edu/es/simulations/vector-addition](https://phet.colorado.edu/es/simulations/vector-addition)
 **Descripción:** Presentaremos la noción de “embeddings” como una grilla estadística donde frases similares quedan vecinas. Veremos su papel dentro de bases de datos vectoriales y cómo esa proximidad permite búsquedas semánticas rápidas y precisas.
 
 ### 4. Grandes Modelos de Lenguaje (LLM)
 
 **Título:** *¿Qué significa “entender” para una máquina?*  
+**Herramientas:** [https://archive.org](https://archive.org/) y [https://annas-archive.org](https://annas-archive.org/)
 **Descripción:** Analizaremos la arquitectura simplificada de un LLM y por qué su capacidad de predecir el siguiente token se traduce en aparente comprensión. Discutiremos la diferencia entre memorización estadística y razonamiento genuino.
 
 ### 5. Tipos de entrada-salida más allá del texto
@@ -63,6 +69,8 @@ Unirse a la sesión, levantar la mano, usar el Chat.
 
 **Título:** *Mapas de poder más allá de los mapas de datos*  
 **Descripción:** Introducción crítica a la concentración de recursos, la hegemonía lingüística del inglés y las estrategias soberanas que emergen en otros idiomas y regiones, incluyendo el español rioplatense.
+
+## SEGUNDA SESIÓN
 
 ### 8. Prompting con base matemática
 
