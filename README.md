@@ -96,6 +96,33 @@ Unirse a la sesión, levantar la mano, usar el Chat.
 
 ---
 
+### Herramientas a utilizar en la Primera Sesión
+
+EEUU:
+
+- [https://aistudio.google.com]()
+- [https://chatgpt.com/]()
+- [https://www.meta.ai/]()
+- [https://grok.com/]()
+- [https://claude.ai/]()
+
+FRANCIA:
+
+- [https://chat.mistral.ai]()
+
+CHINA:
+
+- [https://chat.qwen.ai]()
+- [https://chat.deepseek.com/]()
+
+Internacionales (Cede en UK)
+
+- [https://huggingface.co/chat/]()
+
+PRIVADO. Modelos pequeños.
+
+- [https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1]()
+
 ### Recomendaciones y Materiales incluidos
 
 - Las sesiones son vía Meet (Google). Se recomienda a cada usuario tener una cuenta google (GMail) activa en su navegador durante el curso.
