@@ -161,6 +161,12 @@ Descarga este programa para crear, organizar y probar tus PROMPTS y datos estruc
 
 ---
 
+### Listado de ejemplo de System Prompts sencillos en español
+
+[System Prompts sencillos en español](simple-system-prompts.html)
+
+---
+
 ### Herramientas a utilizar en las Sesiones
 
 **Modelos LLM para chat en línea**
