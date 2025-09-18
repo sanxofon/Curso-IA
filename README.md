@@ -205,3 +205,9 @@ GPT4All. Chatea seguro y privado con modelos abiertos de forma 100% local
 - Las sesiones son vía Meet (Google). Se recomienda a cada usuario tener una cuenta google (GMail) activa en su navegador durante el curso.
 - Esta Guía del curso que seguiremos en línea cada uno desde su Computadora (PC, Mac, Linux)
 - Mira la [lista de herramientas](lista.html) en línea abiertas y/o gratuitas de diversos países con descripciones.
+
+---
+
+### Listado de ejemplo de System Prompts sencillos en español
+
+[System Prompts sencillos en español](simple-system-prompts.html)
