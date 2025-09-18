@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Prompts sencillos en Español</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+        .prompt-card {
+            position: relative;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+        .prompt-card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .w3-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #2196F3; /* w3-blue */
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-bottom-left-radius: 8px;
+            padding: 1px;
+            padding-left: 5px;
+            padding-right: 3px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="w3-container w3-padding-32">
+    <h1 class="w3-center">Lista de System Prompts sencillos en Español</h1>
+    <div class="w3-padding-16">
+        <input type="text" id="searchInput" onkeyup="filterPrompts()" placeholder="Buscar por título..." class="w3-input w3-border w3-round">
+    </div>
+    <div id="prompts-container" class="w3-row-padding"></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('prompts-es.csv')
+            .then(response => response.text())
+            .then(csvText => {
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: function(results) {
+                        const promptsContainer = document.getElementById('prompts-container');
+                        results.data.forEach((row, index) => {
+                            const card = document.createElement('div');
+                            card.className = 'w3-col l4 m6 s12';
+
+                            const promptId = `prompt-${index}`;
+
+                            const contentId = `content-${index}`;
+
+                            card.innerHTML = `
+                                <div class="w3-card-4 prompt-card">
+                                    <header class="w3-container w3-light-grey w3-display-container">
+                                        <h3>${row.act}</h3>
+                                        ${row.for_devs === 'TRUE' ? '<span class="w3-tag w3-blue">VibeCode</span>' : ''}
+                                        <i class="fas fa-chevron-down w3-display-right w3-padding" style="cursor: pointer;" onclick="togglePrompt('${contentId}')"></i>
+                                    </header>
+                                    <div id="${contentId}" class="w3-container w3-padding" style="display: none;">
+                                        <p id="${promptId}">${row.prompt}</p>
+                                        <footer class="w3-container w3-light-grey w3-padding">
+                                            <button class="w3-button w3-blue w3-right" onclick="copyToClipboard('${promptId}', this)">Copiar</button>
+                                        </footer>
+                                    </div>
+                                </div>
+                            `;
+                            promptsContainer.appendChild(card);
+                        });
+                    }
+                });
+            });
+    });
+
+    function filterPrompts() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toUpperCase();
+        const promptsContainer = document.getElementById('prompts-container');
+        const cards = promptsContainer.getElementsByClassName('w3-col');
+
+        for (let i = 0; i < cards.length; i++) {
+            const title = cards[i].getElementsByTagName("h3")[0];
+            if (title) {
+                const txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+    function togglePrompt(contentId) {
+        const content = document.getElementById(contentId);
+        const icon = content.previousElementSibling.querySelector('i');
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            icon.classList.remove('fa-chevron-down');
+            icon.classList.add('fa-chevron-up');
+        } else {
+            content.style.display = "none";
+            icon.classList.remove('fa-chevron-up');
+            icon.classList.add('fa-chevron-down');
+        }
+    }
+
+    function copyToClipboard(elementId, button) {
+        const text = document.getElementById(elementId).innerText;
+        navigator.clipboard.writeText(text).then(function() {
+            const originalText = button.innerHTML;
+            button.innerHTML = '¡Copiado!';
+            setTimeout(() => {
+                button.innerHTML = originalText;
+            }, 2000);
+        }, function(err) {
+            console.error('Error al copiar: ', err);
+        });
+    }
+</script>
+
+</body>
+</html>
